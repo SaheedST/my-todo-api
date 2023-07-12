@@ -1,9 +1,10 @@
-const mongoose = require('mongoose')
+require("dotenv").config();
+const mongoose = require("mongoose");
 
-const dbStr = process.env.DB_CONNECTION_STR.replace('<password>', process.env.DB_PASSWORD)
+const dbStr = process.env.DB_CONNECTION_STR;
 
-const connectDB = ()=>{
-    return mongoose.connect(dbStr)
-}
+const connectDB = () => {
+  return mongoose.connect(dbStr);
+};
 
-module.exports = connectDB
+module.exports = connectDB;
